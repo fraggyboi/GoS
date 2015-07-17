@@ -1,8 +1,3 @@
-
-
-
-
-
 function OnProcessSpell(Object,spellProc) --Object is a pointer to the caster of the spell; spellProc is a struct with some spell datas
 --spellProc.name = the name of the current spell cast (including autoattacks and such)
 --spellProc.windUpTime = number holding the value of the required animation time for an attack to complete
