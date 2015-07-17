@@ -9,10 +9,12 @@ function AfterObjectLoopEvent(myHer0)
 	local castusage = CanUseSpell(myHero,_Q);
 	local target = GetCurrentTarget()
 	if ValidTarget(target, 900) then
-	if KeyIsDown(0x20) then 
+	local capspress = KeyIsDown(0x14);
+    if capspress then
+	local castusage = CanUseSpell(myHero,_Q);
 	if castusage == READY then
 		local mousepos = GetMousePos();
-		CastSkillShot(_Q,enemy.x,enemy.y,enemy.z);
+		CastSkillShot(_Q,mousepos.x,mousepos.y,mousepos.z);
 		end
 	end
 			if CanUseSpell(myHero, _R) == READY and GetDistance(GetOrigin(target), GetOrigin(myHero)) < 650*650 then
