@@ -180,9 +180,6 @@ local myTarget = GetCurrentTarget(); --returns your current target (if any avail
 			end
 			if Ready(_E) and tsDistance < 900 and tsDistance > 200 then
 				CastE(ts.target)
-        Prediction = GetPredictionForPlayer(myHero,unit,GetMoveSpeed(unit),1750,250,1150,70,true,true);
-        if Prediction.HitChance == 1 then
-          CastSkillshot(_R,Prediction.PredPos.x,Prediction.PredPos.y,Prediction.PredPos.z)
         end
 	  end
 end	
