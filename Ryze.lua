@@ -4,6 +4,7 @@ local myHeroPos = nil
 function AfterObjectLoopEvent(myHer0)
     myHero = myHer0
     myHeroPos = GetOrigin(myHero)
+	origin = GetOrigin(target)
 		DrawText("Remember that this is still in alpha version.",24,0,0,0xffff0000);
 		
 	local castusage = CanUseSpell(myHero,_Q);
@@ -14,7 +15,7 @@ function AfterObjectLoopEvent(myHer0)
 	local castusage = CanUseSpell(myHero,_Q);
 	if castusage == READY then
 		local mousepos = GetMousePos();
-		CastSkillShot(_Q,targetorigin.x,targetorigin.y,targetorigin.z);
+		CastSkillShot(_Q,origin.x,origin.y,origin.z);
 		end
 	end
 			if CanUseSpell(myHero, _R) == READY and GetDistance(GetOrigin(target), GetOrigin(myHero)) < 650*650 then
